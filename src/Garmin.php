@@ -19,7 +19,7 @@ class Garmin extends Server
      *
      * @return string
      */
-    public function urlTemporaryCredentials()
+    public function urlTemporaryCredentials(): string
     {
         return self::API_URL . 'oauth-service-1.0/oauth/request_token';
     }
@@ -29,7 +29,7 @@ class Garmin extends Server
      *
      * @return string
      */
-    public function urlAuthorization()
+    public function urlAuthorization(): string
     {
         return 'http://connecttest.garmin.com/oauthConfirm';
     }
@@ -39,7 +39,7 @@ class Garmin extends Server
      *
      * @return string
      */
-    public function urlTokenCredentials()
+    public function urlTokenCredentials(): string
     {
         return self::API_URL . 'oauth-service-1.0/oauth/access_token';
     }
@@ -52,7 +52,7 @@ class Garmin extends Server
      *
      * @return string
      */
-    public function getAuthorizationUrl($temporaryIdentifier)
+    public function getAuthorizationUrl($temporaryIdentifier, array $options = [])
     {
         // Somebody can pass through an instance of temporary
         // credentials and we'll extract the identifier from there.
