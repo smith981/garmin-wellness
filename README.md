@@ -5,7 +5,7 @@ This package provides a Garmin API Client for the PHP League's [OAuth 1.0 Client
 ## Installation
 
 ```
-composer require techgyani/garmin-wellness
+composer require smith981/garmin-wellness
 ```
 
 ## Usage
